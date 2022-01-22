@@ -1,4 +1,25 @@
 <template>
+  <div class="bg-[#bada55] text-[22px] before:content-['ㅋ']">
+    만들어진 거 없으면 이렇게도 써 []
+  </div>
+  <button class="
+    btn-pri
+  "></button>
+  <div class="mt-3 flex -space-x-2 overflow-hidden">
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+  </div>
+  <div class="
+    w-20 md:w-32 lg:w-48 bg-sky-500
+  ">size체크</div>
+  <div class="flex justify-between">
+    <div class="pt-6">1</div>
+    <div>2</div>
+    <div>모바일 구현하고 -> 큰 화면으로 바꿔라</div>
+  </div>
   <button class=" bg-blue-300">
     hover
   </button>
@@ -96,7 +117,23 @@
       I <em>was</em> a marine biologist.
     </p>
   </div>
-
+  <div class="
+  bg-pink-500
+    dark:bg-yellow-200
+  ">다크모드</div>
+  <div class="animate-spin inline-block">돈다 돌아</div>
+  <div class="portrait:hidden print:hidden"> viewport방향(세로), print할 땐 숨겨짐 </div>
+  <div class="landscape:hidden"> viewport방향(가로) </div>
+  <details class="open:bg-yellow-200">ㅎㅇ
+    <summary>열먼 정보가 보여요</summary>
+  </details>
+  <div class="sm:bg-lime-100 md:bg-yellow-300 lg:bg-lime-400 xl:bg-sky-500">
+    미디어쿼리는 이렇게 한다.
+    css는 쓰질 않는구만... 그게 컨셉이긴 한데 말이지
+  </div>
+  <a class="
+  visited:bg-sky-500"
+    href="https://www.naver.com">네이버</a>
 </template>
 
 <script>

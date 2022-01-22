@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-pri {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold;
+    /*
+      속성 컴포넌트화가 가능하다.
+      이미 vue 컴포넌트 사용중이라 얼마나 필요할진 모르겠지만...
+      근데 tawilwindcss는 css 쪼개지마!가 모토이기 때문에 @apply 추천 안함
+    */
+  }
+}

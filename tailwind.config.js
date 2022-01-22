@@ -1,11 +1,11 @@
 module.exports = {
+  // darkMode: false, // or 'media' or 'class'
   // purge: {
     // enabled: true, tailwind 기본적으로 JIT엔진 사용
   content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    // "./index.html",
+    "./src/**/*.{vue,js}",
   ],
-  // darkMode: false, // or 'media' or 'class'
   theme: {
     // screens: {
     //   'sm': '640px',
