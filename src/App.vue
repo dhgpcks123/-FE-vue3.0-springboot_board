@@ -1,143 +1,21 @@
 <template>
-  <div class="bg-[#bada55] text-[22px] before:content-['ㅋ']">
-    만들어진 거 없으면 이렇게도 써 []
+  <Navbar />
+  <div class="flex flex-col items-center">
+    <router-view/>
   </div>
-  <button class="
-    btn-pri
-  "></button>
-  <div class="mt-3 flex -space-x-2 overflow-hidden">
-    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
-    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
-    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/>
-    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
-    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
-  </div>
-  <div class="
-    w-20 md:w-32 lg:w-48 bg-sky-500
-  ">size체크</div>
-  <div class="flex justify-between">
-    <div class="pt-6">1</div>
-    <div>2</div>
-    <div>모바일 구현하고 -> 큰 화면으로 바꿔라</div>
-  </div>
-  <button class=" bg-blue-300">
-    hover
-  </button>
-  <button class=" bg-indigo-300 hover:bg-blue-600">
-    중간 중단점 수정
-  </button>
-  <button class="bg-violet-300 hover:bg-violet-600 active:bg-purple-400">
-    hover, active
-  </button>
-    <button class=" bg-sky-400 focus:bg-sky-700">
-      focus
-  </button>
-
-  <ul role="list" class="p-6 divide-y divide-slate-200">
-    <li class=" flex py-4 first:pt-0 first:pb-0 last:bg-blue-500">
-      값1
-    </li>
-    <li class="flex py-4 first:pt-0 even:bg-violet-300">
-      값2
-    </li>
-    <li class="flex py-4 first:pt-0 last:pb-0 last:bg-blue-500 ">
-      값3
-    </li>
-  </ul>
-  <form class="group hover:bg-indigo-400">
-    <input
-      type="checkbox" 
-      class="checked: opacity-50 group-hover:text-pink-400">
-    <span
-      class="block text-sm font-medium text-slate-600 group-hover:text-pink-400"
-    >
-    Username
-    </span>
-    <input
-      type="email"
-      value="test"
-      class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-          focus:border-sky-400 focus:ring-4 focus:ring-violet-400
-            disabled:bg-slate-400 disabled:text-slate-500 disabled:border-slate-200
-            disabled:shadow-none invalid:border-pink-500 invalid:text-pink-400
-            group-hover:text-pink-400
-            peer"
-      required
-    >
-    <div class=" invisible peer-invalid:visible">텍스트가 올바르지 않아요</div>
-    <!-- peer는 형제에만 사용할 수 있다. -->
-    <div
-      class="hover:bg-regal-blue
-      text-regal-blue after:content-['*']
-      after:ml-1.5 after:text-pink-400 block text-sm"
-    >
-    커스텀 색상
-    </div>
-    <input
-      type="email"
-      placeholder="your@naver.com"
-      class="mt-1 px-3 py-2
-      block w-full rounded-md
-      bg-yellow-50 border shadow-sm border-slate-400 
-      placeholder-pink-400 placeholder:italic placeholder 
-      focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1
-      "
-    >
-  <span
-    class="before:block before:absolute before:-inset-1 before:-skew-y-3
-    before:bg-pink-500 relative inline-block">
-    <span class="relative text-white">사랑해</span>
-  </span>
-    <input type="file" class="block w-full text-sm text-slate-500
-      file:mr-4 file:py-2 file:px-4
-      file:rounded-full file:border-0
-      file:text-sm file:font-semibold
-      file:bg-violet-50 file:text-violet-700
-      hover:file:bg-violet-100
-    "/>
-  <ul 
-    role="list"
-    class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-500"
-  >
-    <li>5 cups chopped Porcini mushrooms</li>
-    <li>1/2 cup of olive oil</li>
-    <li>3lb of celery</li>
-  </ul>
-  </form>
-  <div class="
-    selection:bg-fuchsia-300 selection:text-fuchsia-900
-  ">
-    <p class="
-      first-letter:text-7xl first-letter:mr-3 first-letter:float-left
-    ">
-      So I started to walk into the water. I won't lie to you boys, I was
-      terrified. But I pressed on, and as I made my way past the breakers
-      a strange calm came over me. I don't know if it was divine intervention
-      or the kinship of all living things but I tell you Jerry at that moment,
-      I <em>was</em> a marine biologist.
-    </p>
-  </div>
-  <div class="
-  bg-pink-500
-    dark:bg-yellow-200
-  ">다크모드</div>
-  <div class="animate-spin inline-block">돈다 돌아</div>
-  <div class="portrait:hidden print:hidden"> viewport방향(세로), print할 땐 숨겨짐 </div>
-  <div class="landscape:hidden"> viewport방향(가로) </div>
-  <details class="open:bg-yellow-200">ㅎㅇ
-    <summary>열먼 정보가 보여요</summary>
-  </details>
-  <div class="sm:bg-lime-100 md:bg-yellow-300 lg:bg-lime-400 xl:bg-sky-500">
-    미디어쿼리는 이렇게 한다.
-    css는 쓰질 않는구만... 그게 컨셉이긴 한데 말이지
-  </div>
-  <a class="
-  visited:bg-sky-500"
-    href="https://www.naver.com">네이버</a>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue'
+import Board from './components/Board.vue'
+
 export default {
+  components: {
+    Navbar, Board
+  },
+  setup () {
+
+  }
 
 }
 </script>

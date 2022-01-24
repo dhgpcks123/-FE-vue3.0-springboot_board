@@ -7,6 +7,9 @@ module.exports = {
     "./src/**/*.{vue,js}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     // screens: {
     //   'sm': '640px',
     //   'md': '768px',
