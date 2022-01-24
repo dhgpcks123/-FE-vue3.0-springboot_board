@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "title": "안녕하세요",
+      "content": "만나서 반갑습니다 이건 springboot+vue3로 FE, BE를 분리해서 게시판을 만드는 작업입니다.",
+      "creator": "맛탕",
+      "id": 13
+    },
+    {
+      "title": "Design Tools",
+      "creator": "John Doe",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!",
+      "id": 14
+    },
+    {
+      "title": "작성해봅니다",
+      "creator": "테스트",
+      "content": "작성하는데 이게 게시글로 잘 들어가는지 보기위함입니다.작성하는데 이게 게시글로 잘 들어가는지 보기위함입니다.작성하는데 이게 게시글로 잘 들어가는지 보기위함입니다.",
+      "id": 15
+    },
+    {
+      "title": "글 작성해봅니다.",
+      "creator": "글 작성",
+      "content": "글글 작성글글 작성글글 작성글글 작성글글 작성글글 작성글글 작성",
+      "id": 16
+    },
+    {
+      "title": "작성합니다",
+      "creator": "작성합니다",
+      "content": "안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요",
+      "id": 17
+    }
+  ]
+}
