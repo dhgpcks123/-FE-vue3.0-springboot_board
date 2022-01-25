@@ -18,11 +18,17 @@
       label="내용"
       forId="content"
     />
-    <div>
+    <div class="flex">
       <Button
         type="submit"
         md
       >{{editing? 'update':'create'}}
+      </Button>
+      <Button
+        type="button"
+        md
+        @click="goBack"
+      >뒤로가기
       </Button>
       <Button
         v-if="editing"
@@ -104,13 +110,17 @@ export default {
         name: 'board'
       })
     }
-    
+    const goBack = () => {
+      window.history.back()
+    }
+
     if(props.editing){
       getBoard()
     }
 
     return{
       form, onSave, onDelete,
+      goBack,
     }
   }
 }

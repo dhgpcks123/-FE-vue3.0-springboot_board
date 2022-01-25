@@ -37,14 +37,11 @@
 
 <script>
 import { ref } from 'vue'
+import { useMenu } from '@/composables/menu.js'
 
 export default {
   setup(){
-    const menuList = [
-      {'name': 'home', 'path': 'home'},
-      {'name': '게시판', 'path': 'board'},
-      {'name': '프로필', 'path': 'profile'},
-    ]
+    const menuList = useMenu()
     const toggleStatus = ref(false)
     const toggleMenu = () => {
       toggleStatus.value = !toggleStatus.value;
