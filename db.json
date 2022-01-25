@@ -1,12 +1,6 @@
 {
   "data": [
     {
-      "title": "안녕하세요",
-      "content": "만나서 반갑습니다 이건 springboot+vue3로 FE, BE를 분리해서 게시판을 만드는 작업입니다.",
-      "creator": "맛탕",
-      "id": 13
-    },
-    {
       "title": "Design Tools",
       "creator": "John Doe",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!",
@@ -31,40 +25,10 @@
       "id": 17
     },
     {
-      "title": "테스트 글쓰기",
-      "creator": "지금 다 쪼갰다",
-      "content": "오버플로우완성!\n    오버플로우완성!\n    오버플로우완성!\n    오버플로우완성!\n    ",
-      "id": 18
-    },
-    {
-      "title": "@Input",
-      "creator": "ehl",
-      "content": "되었을 때 내용을 이거 자동으로 내려가기 안되나?올린다...\n    ",
-      "id": 19
-    },
-    {
       "title": "안녕하세요wef",
       "creator": "wefwefwef",
       "content": "만나서 반갑습니다wefwefwef 이건 springboot+vue3로 FE, BE를 분리해서 게시판을 만드는 작업입니다.",
       "id": 20
-    },
-    {
-      "title": "안녕하세요",
-      "creator": "맛탕wef",
-      "content": "만나서 반갑습니다 이건 springboot+vue3로 FE, BE를 분리해서 게시판을 만드는 작업입니다.",
-      "id": 21
-    },
-    {
-      "title": "안녕하세요",
-      "creator": "맛탕qwef",
-      "content": "만나서 반갑습니다 이건 springboot+vue3로 FE, BE를 분리해서 게시판을 만드는 작업입니다.",
-      "id": 22
-    },
-    {
-      "title": "qwer",
-      "creator": "qwerqwer",
-      "content": "qwerqwerqwerjqowekjr\nqoiweqwerqwerqqwerqwerqwerjqowekjrqoiweqwerqwerqwerjqowekjrqoiweqwerqwerqwerjqowekjrqoiwewerjqowekjrqoiweqwerqwerqwerjqowekjrqoiweqwerqwerqwerjqowekjrqoiwe",
-      "id": 23
     }
   ]
 }

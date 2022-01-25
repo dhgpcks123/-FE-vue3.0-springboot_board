@@ -1,6 +1,6 @@
 <template>
   <button class=
-    "rounded-lg bg-violet-300 "
+    "rounded-lg bg-violet-300 m-3"
     v-bind="$attrs"
     :type="type"
     :class="classes"

@@ -18,11 +18,20 @@
       label="내용"
       forId="content"
     />
-    <Button
-      type="submit"
-      md
-    >{{editing? 'update':'create'}}
-    </Button>
+    <div>
+      <Button
+        type="submit"
+        md
+      >{{editing? 'update':'create'}}
+      </Button>
+      <Button
+        v-if="editing"
+        type="button"
+        md
+        @click="onDelete"
+      >삭제하기
+      </Button>
+    </div>
   </form>
 </template>
 
@@ -72,13 +81,11 @@ export default {
           creator: form.value.creator,
           content: form.value.content,
         }
-
-      if(props.editing){
-        const res = await axios.put(`data/${boardId}`, data)        
-      }else{
-        const res = await axios.post(`data`, data)        
-      }
-
+        if(props.editing){
+          const res = await axios.put(`data/${boardId}`, data)        
+        }else{
+          const res = await axios.post(`data`, data)        
+        }
         router.push({
           name: 'board'
         })
@@ -86,13 +93,24 @@ export default {
         console.log(err)
       }
     }
+    const onDelete = async () => {
+      if(!confirm('진짜 삭제할래요?'))return
+      try{
+        await axios.delete(`data/${boardId}`)
+      }catch(err){
+        console.log(err)
+      }
+      router.push({
+        name: 'board'
+      })
+    }
     
     if(props.editing){
       getBoard()
     }
 
     return{
-      form, onSave,
+      form, onSave, onDelete,
     }
   }
 }
