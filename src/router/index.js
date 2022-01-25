@@ -3,6 +3,7 @@ import home from '../pages/home.vue'
 import board from '../pages/board.vue'
 import profile from '../pages/profile.vue'
 import add from '@/pages/add.vue'
+import edit from '@/pages/edit.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/add',
       name: 'add',
       component: add
+    },
+    {
+      path: '/board/:id',
+      name: 'edit',
+      component: edit
     }
   ]
 })

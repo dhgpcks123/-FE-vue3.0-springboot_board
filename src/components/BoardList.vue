@@ -1,8 +1,10 @@
 <template>
   <div class=
-    "max-w-md py-4 px-8 bg-white shadow-lg rounded-lg first:mt-20 mb-5"
+    "max-w-md py-4 px-8 bg-white shadow-lg rounded-lg first:mt-20 mb-5
+    cursor-pointer"
     v-for="board in boards"  
     v-bind:key="board.id"
+    @click="goEditPage(board.id)"
   >
   <div>
     <h2 class=
@@ -19,6 +21,8 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router'
+
 export default {
   components: {
   },
@@ -28,6 +32,21 @@ export default {
       required: true,
     }
   },
+  setup() {
+    const router = useRouter()
+
+    const goEditPage = (boardId) => {
+      router.push({
+        name: 'edit',
+        params: {
+          id: boardId
+        }
+      })
+    }
+    return {
+      goEditPage,
+    }
+  }
 }
 </script>
 

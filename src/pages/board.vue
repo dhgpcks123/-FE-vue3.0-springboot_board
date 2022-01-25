@@ -3,12 +3,9 @@
     "flex m-5"
     :to="{name:'add'}"
   >
-    <button class=
-      "rounded-lg bg-violet-300 w-20 h-10"
-      type="submit"
-    >
+    <Button sm>
       글 작성하기
-    </button>
+    </Button>
   </router-link>
   <BoardList
     :boards="boards"
@@ -17,12 +14,13 @@
 
 <script>
 import { ref } from 'vue'
-import BoardList from '../components/BoardList.vue'
 import axios from '@/axios'
+import BoardList from '../components/BoardList.vue'
+import Button from '@/components/Button.vue'
 
 export default {
   components: {
-    BoardList,
+    BoardList, Button
   },
   setup() {
     const boards = ref([])

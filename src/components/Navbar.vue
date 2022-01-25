@@ -1,7 +1,7 @@
 <template>
   <nav class=
-  "bg-gradient-to-tr from-indigo-300 to-red-200 rounded-md shadow-md w-full
-  flex flex-col p-4 sm:flex-row sm:justify-between"
+    "bg-gradient-to-tr from-indigo-300 to-red-200 rounded-md shadow-md w-full
+    flex flex-col p-4 sm:flex-row sm:justify-between"
   >
     <div class=
     "flex justify-between sm:flex-none"

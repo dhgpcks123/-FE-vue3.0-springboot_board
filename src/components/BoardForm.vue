@@ -3,71 +3,68 @@
     "py-5 px-20 shadow-lg rounded-lg flex flex-col items-center"
     @submit.prevent="onSave"
   >
-    <label class=
-      "flex flex-col my-4"
-      for="title"
-    >
-      <span>
-        타이틀
-      </span> 
-      <input class=
-        "rounded-lg p-3 bg-white border-2"
-        placeholder="타이틀 입력하세요"
-        id="title"
-        v-model="form.title"
-      >
-    </label>
-    <label class=
-      "flex flex-col my-4"
-      for="creator"
-    >
-      <span>
-        작성자
-      </span> 
-      <input class=
-        "rounded-lg p-3 bg-white border-2"
-        placeholder="작성자를 입력하세요"
-        id="creator"
-        v-model="form.creator"
-      >
-    </label>
-    <label class=
-      "flex flex-col my-4"
-      for="content"
-    >
-      <span>
-        내용
-      </span> 
-      <textarea class=
-        "rounded-lg p-3 bg-white border-2"
-        id="content"
-        v-model="form.content"
-      >
-      </textarea>
-    </label>
-    <button class=
-      "rounded-lg bg-violet-300 w-20 h-10"
+    <Input
+      v-model:value="form.title"
+      label="제목"
+      forId="title"
+    />
+    <Input
+      v-model:value="form.creator"
+      label="작성자"
+      forId="creator"
+    />
+    <TextArea 
+      v-model:value="form.content"
+      label="내용"
+      forId="content"
+    />
+    <Button
       type="submit"
-    >
-      작성하기
-    </button>
+      md
+    >{{editing? 'update':'create'}}
+    </Button>
   </form>
 </template>
 
 <script>
 import {ref} from 'vue'
 import axios from '@/axios.js'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
+import Input from '@/components/Input.vue'
+import TextArea from '@/components/Textarea.vue'
+import Button from '@/components/Button.vue'
 
 export default {
-  setup() {
+  components: {
+    Input, TextArea, Button
+  },
+  props:{
+    editing: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  setup(props) {
     const router = useRouter()
+    const route = useRoute()
     const form = ref({
       title : '',
       creator: '',
       content: '',
     })
-    
+    const boardId = route.params.id
+    const oriForm = ref(null)
+
+    const getBoard = async () => {
+      try{
+        const res = await axios.get(`data/${boardId}`)
+        form.value = {...res.data}
+        oriForm.value = {...res.data}
+        console.log(form.value)
+      }catch(err){
+        console.log(err)
+      }
+    }
     const onSave = async () => {
       try{
         const data = {
@@ -75,7 +72,13 @@ export default {
           creator: form.value.creator,
           content: form.value.content,
         }
-        const res = await axios.post(`data`, data)
+
+      if(props.editing){
+        const res = await axios.put(`data/${boardId}`, data)        
+      }else{
+        const res = await axios.post(`data`, data)        
+      }
+
         router.push({
           name: 'board'
         })
@@ -84,6 +87,10 @@ export default {
       }
     }
     
+    if(props.editing){
+      getBoard()
+    }
+
     return{
       form, onSave,
     }

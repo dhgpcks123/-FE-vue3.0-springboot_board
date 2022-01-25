@@ -1,19 +1,18 @@
 <template>
   <label class=
-  "flex flex-col my-4"
-  :for="forId"
+    "flex flex-col my-4"
+    :for="forId"
   >
-  <span>
-    {{label}}
-  </span> 
-  <input class=
-    "rounded-lg p-3 bg-white border-2"
-    :placeholder="`${label}을 입력하세요`"
-    type="text"
-    :id="forId"
-    @input="onInput"
-    :value="value"
-  >
+    <span>
+      {{label}}
+    </span> 
+    <textarea class=
+      "rounded-lg p-3 bg-white border-2"
+      :id="forId"
+      @input="onInput"
+      :value="value"
+    >
+    </textarea>
   </label>
 </template>
 
